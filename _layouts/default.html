@@ -9,12 +9,12 @@
         <meta name="description" content="{{ site.description }}">
         
         <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700,400,400italic|Ubuntu+Mono' rel='stylesheet' type='text/css'>
-        <script type="application/javascript" src="/inc/jquery-2.2.0.min.js"></script>
-        <link rel="stylesheet" href="/inc/bootstrap/css/bootstrap.min.css" type="text/css">
-        <script type="application/javascript" src="/inc/bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="{{ site.url }}/inc/jquery-2.2.0.min.js"></script>
+        <link rel="stylesheet" href="{{ site.url }}/inc/bootstrap/css/bootstrap.min.css" type="text/css">
+        <script type="application/javascript" src="{{ site.url }}/inc/bootstrap/js/bootstrap.min.js"></script>
         
-        <link rel='stylesheet' href="/css/main.css" type="text/css">
-        <script type="application/javascript" src='/inc/site.js'></script>
+        <link rel='stylesheet' href="{{ site.url }}/css/main.css" type="text/css">
+        <script type="application/javascript" src='{{ site.url }}/inc/site.js'></script>
         
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     </head>

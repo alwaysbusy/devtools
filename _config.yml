@@ -1,7 +1,7 @@
 # Site settings
 title: DevTools Guide
 description: A guide to common and useful developer tools and resources
-url: "http://devtools.hurfo.com"
+url: "http://alwaysbusy.github.io/devtools"
 
 # Build settings
 markdown: kramdown
