@@ -81,6 +81,26 @@ header nav ul li a {
     font-weight: bold;
 }
 
+#quickview {
+    background-color: $blue;
+    overflow: auto;
+    color: $text-color-light;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#quickview a {
+    color: inherit;
+    border: 1px solid $text-color-light;
+    border-radius: 4px;
+    padding: 4px;
+    
+    &:hover,
+    &:active, {
+        color:inherit;
+    }
+}
+
 footer {
     background-color: $text-color;
     color: $text-color-light;
