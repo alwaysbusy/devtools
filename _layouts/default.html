@@ -8,12 +8,42 @@
         <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
         <meta name="description" content="{{ site.description }}">
         
+        <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700,400,400italic|Ubuntu+Mono' rel='stylesheet' type='text/css'>
+        <script type="application/javascript" src="/inc/jquery-2.2.0.min.js"></script>
+        <link rel="stylesheet" href="/inc/bootstrap/css/bootstrap.min.css" type="text/css">
+        <script type="application/javascript" src="/inc/bootstrap/js/bootstrap.min.js"></script>
+        
+        <link rel='stylesheet' href="/css/main.css" type="text/css">
+        <script type="application/javascript" src='/inc/site.js'></script>
+        
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
     </head>
     <body>
-        <header></header>
-        <div class="content">
+        <header>
+            <div class="content">
+                <nav>
+                    <ul>
+                        <li style="font-weight:bold"><a href="/" title="DevTools">DevTools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="title">
+            <div class="content">
+                <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                {% if page.description %}<p class="desc">{{ page.description }}</p>{% endif %}
+            </div>
+        </section>
+        <div class="content" id="content">
             {{ content }}
         </div>
+        <footer>
+            <div class="content">
+                <div class="col-xs-3 center">
+                    <a href="http://www.hurfo.com"><img src="/inc/brand/Hgreyl.png" alt="Owen Hurford" /></a>
+                    <p>Designed and built by <a href="http://www.hurfo.com/">Owen Hurford</a></p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

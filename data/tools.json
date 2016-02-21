@@ -1,0 +1,15 @@
+---
+--- 
+
+[
+    {% for page in site.pages %}{% if page.url contains '/tool/' %}
+    { 
+        "title": "{{ page.title }}",
+        "url": "{{ page.url | prepend: site.baseurl }}",
+        "type": "{{ page.type }}",
+        "languages": ["{{ page.languages | replace: ', ', '", "' }}"],
+        "platforms": ["{{ page.platforms | replace: ', ', '", "' }}"]
+    }
+    {% if forloop.last == 'false' %},{% endif %}
+    {% endif %}{% endfor %}
+]
