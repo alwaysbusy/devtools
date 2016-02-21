@@ -1,7 +1,9 @@
+---
+---
 'use strict';
 
 window.addEventListener('DOMContentLoaded', function () {
-    $.ajax({url: '/data/tools.json', success: function (result) {
+    $.ajax({url: '{{ site.url }}/data/tools.json', success: function (result) {
         var lists = [].slice.call(window.document.getElementsByClassName('listall'));
         result = JSON.parse(result);
         for (var list in lists) {
