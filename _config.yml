@@ -1,0 +1,7 @@
+# Site settings
+title: DevTools Guide
+description: A guide to common and useful developer tools and resources
+url: "http://devtools.hurfo.com"
+
+# Build settings
+markdown: kramdown
