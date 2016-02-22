@@ -82,11 +82,20 @@ header nav ul li a {
 }
 
 #quickview {
-    background-color: $blue;
     overflow: auto;
     color: $text-color-light;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    left: 0px;
+}
+
+#quickview .content {
+    background-color: $blue;
+    overflow: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 #quickview a {
@@ -99,6 +108,14 @@ header nav ul li a {
     &:active, {
         color:inherit;
     }
+}
+
+#quickview h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
 }
 
 footer {
