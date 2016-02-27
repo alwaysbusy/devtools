@@ -10,6 +10,6 @@
         "languages": ["{{ page.languages | replace: ', ', '", "' }}"],
         "platforms": ["{{ page.platforms | replace: ', ', '", "' }}"]
     }
-    {% if forloop.last == 'false' %},{% endif %}
+    {% if forloop.last == true %}{% else %},{% endif %}
     {% endif %}{% endfor %}
 ]
