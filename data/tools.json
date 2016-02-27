@@ -9,7 +9,7 @@
         "type": "{{ page.type }}",
         "languages": ["{{ page.languages | replace: ', ', '", "' }}"],
         "platforms": ["{{ page.platforms | replace: ', ', '", "' }}"]
-    }
-    {% if forloop.last == true %}{% else %},{% endif %}
+    },
     {% endif %}{% endfor %}
+    {}
 ]

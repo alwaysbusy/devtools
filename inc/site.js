@@ -9,18 +9,20 @@ window.addEventListener('DOMContentLoaded', function () {
         for (var list in lists) {
             var ul = document.createElement('ul');
             for (var item in result) {
-                var li = document.createElement('li');
-                var title = document.createTextNode(result[item].title);
-                if (lists[list].getAttribute('data-link') === null || lists[list].getAttribute('data-link') === 'link') {
-                    var a = document.createElement('a');
-                    a.href = result[item].url;
-                    a.title = result[item].title;
-                    a.appendChild(title);
-                    li.appendChild(a);
-                } else {
-                    li.appendChild(title);
+                if (result[item].url) {
+                    var li = document.createElement('li');
+                    var title = document.createTextNode(result[item].title);
+                    if (lists[list].getAttribute('data-link') === null || lists[list].getAttribute('data-link') === 'link') {
+                        var a = document.createElement('a');
+                        a.href = result[item].url;
+                        a.title = result[item].title;
+                        a.appendChild(title);
+                        li.appendChild(a);
+                    } else {
+                        li.appendChild(title);
+                    }
+                    ul.appendChild(li);   
                 }
-                ul.appendChild(li);
             }
             lists[list].appendChild(ul);
         }
