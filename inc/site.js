@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
         for (var list in lists) {
             var ul = document.createElement('ul');
             for (var item in result) {
-                if (result[item].url) {
+                if (result[item].url !== undefined) {
                     var li = document.createElement('li');
                     var title = document.createTextNode(result[item].title);
                     if (lists[list].getAttribute('data-link') === null || lists[list].getAttribute('data-link') === 'link') {

@@ -5,7 +5,7 @@
     {% for page in site.pages %}{% if page.url contains '/tool/' %}
     { 
         "title": "{{ page.title }}",
-        "url": "{{ page.url | prepend: site.baseurl }}",
+        "url": "{{ page.url | prepend: site.url }}",
         "type": "{{ page.type }}",
         "languages": ["{{ page.languages | replace: ', ', '", "' }}"],
         "platforms": ["{{ page.platforms | replace: ', ', '", "' }}"]
